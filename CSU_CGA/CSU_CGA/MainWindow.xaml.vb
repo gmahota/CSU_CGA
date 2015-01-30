@@ -34,7 +34,7 @@ Class MainWindow
         listFiles = New ObservableCollection(Of Ficheiro)()
         ' Add any initialization after the InitializeComponent() call.
         jury_controller = New Jvris_Controller()
-        jury_controller.AbreEmpresaPrimavera(1, "cga2011", "accsys", "accsys2011")
+        jury_controller.AbreEmpresaPrimavera(1, "cga", "accsys", "accsys2011")
 
     End Sub
 
