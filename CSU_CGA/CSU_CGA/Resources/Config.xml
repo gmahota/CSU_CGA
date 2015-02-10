@@ -1,3 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Configuracao>
+  
+  <geral>
+    <Pastas>
+      <pasta tipo = "Geral" folder="c:\jvris_primavera"/>
+      <pasta tipo = "Por Importar" folder="C:\jvris_primavera\Por Importar"/>
+      <pasta tipo = "Importado" folder="C:\jvris_primavera\Importado"/>
+      <pasta tipo = "Cancelados" folder="C:\jvris_primavera\Cancelados"/>
+      <pasta tipo = "Erro de Importação" folder="C:\jvris_primavera\Erro de Importação"/>
+    </Pastas> 
+  </geral>
+  
+  <instancias>
+    <Instancia instancia ="1" empresa ="Clone" usuario="accsys" password ="accsys2011" instanciaSql ="ACCPRI08\PRIMAVERAV810" empresaSql ="PRIClone" usuarioSql="sa" passwordSql ="accsys2011"/>
+  </instancias>
+
+</Configuracao>
 

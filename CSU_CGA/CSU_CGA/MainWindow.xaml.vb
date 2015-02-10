@@ -7,7 +7,7 @@ Imports System.Threading
 Class MainWindow
     Public listFiles As ObservableCollection(Of Ficheiro)
     Public jury_controller As Jvris_Controller
-
+    Dim xmlHelper As XmlHelper = New XmlHelper
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
 
@@ -48,6 +48,10 @@ Class MainWindow
         jury_controller = New Jvris_Controller()
         jury_controller.AbreEmpresaPrimavera(1, "cga", "accsys", "accsys2011")
 
+        Dim a As XmlHelper
+        a = New XmlHelper
+        a.loadFolder()
+
     End Sub
 
     Private Sub ComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
@@ -66,10 +70,22 @@ Class MainWindow
             Dim sel As ListBoxItem = cbFicheiro.SelectedValue
 
             Select Case sel.Content
-                Case "Por Importar" : caminho = "C:\jvris_primavera\Por Importar"
-                Case "Importado" : caminho = "C:\jvris_primavera\Importado"
-                Case "Cancelados" : caminho = "C:\jvris_primavera\Cancelados"
-                Case "Erro de Importação" : caminho = "C:\jvris_primavera\Erro de Importação"
+                Case "Por Importar"
+                    caminho = xmlHelper.daPasta("Por Importar")
+                    IIf(caminho <> "", caminho, "C:\jvris_primavera\Por Importar")
+                    
+                Case "Importado"
+                    caminho = xmlHelper.daPasta("Importado")
+                    IIf(caminho <> "", caminho, "C:\jvris_primavera\Importado")
+
+                Case "Cancelados"
+                    caminho = xmlHelper.daPasta("Cancelados")
+                    IIf(caminho <> "", caminho, "C:\jvris_primavera\Cancelados")
+
+                Case "Erro de Importação"
+                    caminho = xmlHelper.daPasta("Erro de Importação")
+                    IIf(caminho <> "", caminho, "C:\jvris_primavera\Erro de Importação")
+
             End Select
 
 
