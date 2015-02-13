@@ -1,13 +1,12 @@
 ﻿Imports System.IO
 Imports System.Collections.ObjectModel
-Imports CSU_CGA
 Imports System.Globalization
 Imports System.Threading
 
-Class MainWindow
+Public Class ImportadorJyris
     Public listFiles As ObservableCollection(Of Ficheiro)
     Public jury_controller As Jvris_Controller
-    Dim xmlHelper As XmlHelper = New XmlHelper
+    Dim xmlHelper As XmlHelper
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
 
@@ -27,17 +26,18 @@ Class MainWindow
             MessageBox.Show("Não foi selecionado nenhum ficheiro")
 
         End If
-        
+
 
     End Sub
 
     Public Sub New()
-        
-        
+
+
         ' This call is required by the designer.
         InitializeComponent()
-
-        'Show()
+        Me.Show()
+        
+        inicializar()
 
     End Sub
 
@@ -55,10 +55,7 @@ Class MainWindow
         jury_controller = New Jvris_Controller()
         'jury_controller.AbreEmpresaPrimavera(1, "cga", "accsys", "accsys2011")
 
-        Dim a As XmlHelper
-        a = New XmlHelper
-        a.loadFolder()
-
+        xmlHelper = New XmlHelper
     End Sub
 
     Private Sub ComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
@@ -80,7 +77,7 @@ Class MainWindow
                 Case "Por Importar"
                     caminho = xmlHelper.daPasta("Por Importar")
                     IIf(caminho <> "", caminho, "C:\jvris_primavera\Por Importar")
-                    
+
                 Case "Importado"
                     caminho = xmlHelper.daPasta("Importado")
                     IIf(caminho <> "", caminho, "C:\jvris_primavera\Importado")

@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSU_CGA\CSU_CGA.vbproj">
-      <Project>{70e299cb-2a37-482b-bda0-82616be084a6}</Project>
+      <Project>{37a42548-feff-44a7-9b56-076ee4566754}</Project>
       <Name>CSU_CGA</Name>
     </ProjectReference>
   </ItemGroup>

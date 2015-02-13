@@ -4,7 +4,7 @@ Imports System.Xml.Serialization
 Imports System.Xml
 
 Public Class XmlHelper
-    Public filename = My.Application.Info.DirectoryPath + "\Resources\Config.xml"
+    Public filename As String
 
     Public Sub loadFolder()
         Try
@@ -41,8 +41,14 @@ Public Class XmlHelper
                 
             Next
         Catch ex As Exception
-
+            MessageBox.Show("Pasta de configuração não encontrada: " + filename)
         End Try
         Return ""
     End Function
+
+
+    Public Sub New()
+        filename = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase) + "\Resources\Config.xml"
+        ' My.Application.Info.DirectoryPath + "\Resources\Config.xml"
+    End Sub
 End Class

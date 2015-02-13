@@ -17,7 +17,7 @@ Imports System.Windows
 <Assembly: AssemblyProduct("CSU_CGA")> 
 <Assembly: AssemblyCopyright("Copyright © HP 2014")> 
 <Assembly: AssemblyTrademark("")> 
-<Assembly: ComVisible(True)> 
+<Assembly: ComVisible(False)> 
 
 'In order to begin building localizable applications, set 
 '<UICulture>CultureYouAreCodingWith</UICulture> in your .vbproj file
@@ -58,4 +58,4 @@ Imports System.Windows
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> 
 
-<Assembly: NeutralResourcesLanguageAttribute("pt-PT")> 
+<Assembly: NeutralResourcesLanguageAttribute("")> 
