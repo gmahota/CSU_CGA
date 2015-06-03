@@ -1,5 +1,5 @@
 ﻿Imports CSU_CGA
-Imports Interop.ErpBS800
+Imports Interop.ErpBS900
 
 <ComClass(Pri_Jyris.ClassId, Pri_Jyris.InterfaceId, Pri_Jyris.EventsId)>
 Public Class Pri_Jyris

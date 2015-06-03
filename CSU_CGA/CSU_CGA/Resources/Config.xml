@@ -9,11 +9,13 @@
       <pasta tipo = "Importado" folder="C:\jvris_primavera\Importado"/>
       <pasta tipo = "Cancelados" folder="C:\jvris_primavera\Cancelados"/>
       <pasta tipo = "Erro de Importação" folder="C:\jvris_primavera\Erro de Importação"/>
-    </Pastas> 
+    </Pastas>
+    <ficheiro password=""></ficheiro>
   </geral>
   
+  
   <instancias>
-    <Instancia instancia ="1" empresa ="Clone" usuario="accsys" password ="accsys2011" instanciaSql ="ACCPRI08\PRIMAVERAV810" empresaSql ="PRIClone" usuarioSql="sa" passwordSql ="accsys2011"/>
+    <Instancia versaoErp="V900" instancia ="1" empresa ="CGA" usuario="accsys" password ="accsys2011" instanciaSql ="ACCPRI12\PRIMAVERAV810" empresaSql ="PRICGA" usuarioSql="sa" passwordSql ="accsys2011!"/>
   </instancias>
 
 </Configuracao>

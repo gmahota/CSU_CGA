@@ -9,35 +9,20 @@ Class MainWindow
     Public jury_controller As Jvris_Controller
     Dim xmlHelper As XmlHelper = New XmlHelper
 
-    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-
-        Dim lista = CType(Me.Resources("ListFicheiros"), Ficheiro_Controller)
-
-        If lista.Count > 0 Then
-            For Each fich As Ficheiro In lista
-
-                If fich.Sel = "True" Then
-                    jury_controller.Integracao_Primavera(fich.FicheiroSel)
-                End If
-
-
-            Next
-            actualizar()
-        Else
-            MessageBox.Show("Não foi selecionado nenhum ficheiro")
-
-        End If
-        
-
-    End Sub
-
     Public Sub New()
         
         
         ' This call is required by the designer.
         InitializeComponent()
+        Dim imp As ImportadorJyris
+        imp = New ImportadorJyris
+        imp.Show()
 
-        'Show()
+        xmlHelper.loadFolder()
+        imp.jury_controller.AbreEmpresaPrimavera(xmlHelper.instancia.instancia, xmlHelper.instancia.empresa,
+                                                 xmlHelper.instancia.usuario, xmlHelper.instancia.password)
+        imp.jury_controller = New Jvris_Controller
+        Hide()
 
     End Sub
 
@@ -61,11 +46,31 @@ Class MainWindow
 
     End Sub
 
+    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
+
+        'Dim lista = CType(Me.Resources("ListFicheiros"), Ficheiro_Controller)
+
+        'If lista.Count > 0 Then
+        '    For Each fich As Ficheiro In lista
+
+        '        If fich.Sel = "True" Then
+        '            jury_controller.Integracao_Primavera(fich.FicheiroSel)
+        '        End If
+
+
+        '    Next
+        '    actualizar()
+        'Else
+        '    MessageBox.Show("Não foi selecionado nenhum ficheiro")
+
+        'End If
+
+
+    End Sub
+
     Private Sub ComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
 
         actualizar()
-
-
     End Sub
 
     Private Sub actualizar()
