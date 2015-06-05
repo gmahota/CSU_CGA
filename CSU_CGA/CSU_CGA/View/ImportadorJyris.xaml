@@ -6,11 +6,37 @@
     Title="ImportadorJyris" Height="600.432" Width="999.549">
 
     <Control.Resources>
-        <c:Ficheiro_Controller x:Key="ListFicheiros"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+
+
+                <ResourceDictionary Source="pack://application:,,,/CSU_CGA;component/Resources/Icons.xaml" />
+                
+
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
     </Control.Resources>
 
-    <DockPanel>
-        <ToolBarTray DockPanel.Dock="Top">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0">
 
             <ToolBar>
                 <Button Cursor="Arrow" x:Name="btupdate" Click="btupdate_Click" IsEnabled="True">
@@ -64,7 +90,7 @@
             </ToolBar>
         </ToolBarTray>
 
-        <Grid VerticalAlignment="Top">
+        <Grid Grid.Row="1" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="364.657" />
                 <ColumnDefinition Width="31.343"/>
@@ -123,10 +149,14 @@
 
                 </StackPanel>                
             </ScrollViewer>
-                
+         </Grid>
+ 
 
-
-
-        </Grid>
-    </DockPanel>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>MIT -</StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}" />
+            <StatusBarItem>Tabela Selecionada:</StatusBarItem>
+            <StatusBarItem Content="{Binding ElementName=tbMain, Path=SelectedItem.Header, Mode=OneWay}" />
+        </StatusBar>
+    </Grid>
 </Controls:MetroWindow>

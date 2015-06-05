@@ -168,9 +168,6 @@
     <Compile Include="View\ClienteWindow.xaml.vb">
       <DependentUpon>ClienteWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window1.xaml.vb">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
     <Page Include="View\ImportadorJyris.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -198,10 +195,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ClienteWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

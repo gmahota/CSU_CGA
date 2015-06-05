@@ -16,9 +16,11 @@
 
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CSU_CGA;component/Resources/Icons.xaml" />
 
 
-                <ResourceDictionary Source="/Resources/Icons.xaml" />
+
+                <!--<ResourceDictionary Source="/Resources/Icons.xaml" />-->
 
 
             </ResourceDictionary.MergedDictionaries>

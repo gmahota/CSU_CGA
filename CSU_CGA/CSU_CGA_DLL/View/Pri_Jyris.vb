@@ -1,5 +1,4 @@
 ﻿Imports CSU_CGA
-Imports Interop.ErpBS900
 
 <ComClass(Pri_Jyris.ClassId, Pri_Jyris.InterfaceId, Pri_Jyris.EventsId)>
 Public Class Pri_Jyris
@@ -10,25 +9,15 @@ Public Class Pri_Jyris
 
     Public Sub Inicializar(tipoPlataforma As Integer, codEmpresa As String, codUsuario As String, password As String)
         Try
-            Dim janela As CSU_CGA.ImportadorJyris
-            janela = New CSU_CGA.ImportadorJyris()
+            Dim janela As ImportadorJyris
+            janela = New ImportadorJyris()
+
             janela.jury_controller.AbreEmpresaPrimavera(tipoPlataforma, codEmpresa, codUsuario, password)
         Catch ex As Exception
             MsgBox("erro ao abrir a janela" + ex.Message)
         End Try
 
     End Sub
-
-    Public Sub InicializarMotor(motor As ErpBS)
-        Try
-            Dim janela As CSU_CGA.ImportadorJyris
-            janela = New CSU_CGA.ImportadorJyris()
-            janela.jury_controller.InicializaMotor(motor)
-        Catch ex As Exception
-            MsgBox("erro ao abrir a janela" + ex.Message)
-        End Try
-    End Sub
-
 
     Public Sub New()
 
