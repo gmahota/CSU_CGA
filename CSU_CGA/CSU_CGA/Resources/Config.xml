@@ -9,6 +9,7 @@
       <pasta tipo = "Importado" folder="C:\jvris_primavera\Importado"/>
       <pasta tipo = "Cancelados" folder="C:\jvris_primavera\Cancelados"/>
       <pasta tipo = "Erro de Importação" folder="C:\jvris_primavera\Erro de Importação"/>
+      <pasta tipo = "Ficheiros Exportados" folder="C:\jvris_primavera\Ficheiros Exportados"/>
     </Pastas>
     <ficheiro password=""></ficheiro>
   </geral>
