@@ -1,6 +1,6 @@
-﻿Imports Interop.ErpBS900
+﻿Imports Interop.ErpBS800
 Imports System.Data
-Imports Interop.GcpBE900
+Imports Interop.GcpBE800
 
 Public Class ClienteWindow
     Dim objmotor As ErpBS

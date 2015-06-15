@@ -156,7 +156,8 @@
             <StatusBarItem>MIT -</StatusBarItem>
             <Separator Style="{StaticResource MetroStatusBarSeparator}" />
             <StatusBarItem>Tabela Selecionada:</StatusBarItem>
-            <StatusBarItem Content="{Binding ElementName=tbMain, Path=SelectedItem.Header, Mode=OneWay}" />
+            <StatusBarItem x:Name="logUpdate"  />
+            
         </StatusBar>
     </Grid>
 </Controls:MetroWindow>
